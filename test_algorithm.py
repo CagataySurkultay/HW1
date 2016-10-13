@@ -17,8 +17,15 @@ class TestFunc(unittest.TestCase):
   def test_whenArrayIsNone(self):
     self.assertFalse(func([None], 10 , 90))
 
+  def test_whentwoElementIsNegative(self):
+    self.assertFalse(func(self.array, -1, -6))
+  
+  def test_whentwoElementIsNone(self):
+    self.assertFalse(func(self.array, None, None))
+
   def test_whenElementIsNone(self):
     self.assertFalse(func(self.array, None, 1))
+
 
 
 if __name__ == '__main__':
